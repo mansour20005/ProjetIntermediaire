@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <%- include('./partials/head.ejs') %>
+   <title>Accueil</title>
+</head>
+<body>
+   <%- include('./partials/navbar.ejs') %>
+   
+   <h1>Acceil</h1>
+   
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <% articles.forEach( (article) => { %>
+            <%- include("./partials/article_card",{article}) %>
+        <%}); %>
+   </div> <br>
+   
+   <footer>
+      <%- include('./partials/footer.ejs') %>
+   </footer>
+   
+   <%- include('./partials/scripts.ejs') %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <%- include('../partials/head.ejs') %>
+   <title>Article</title>
+</head>
+<body>
+   <%- include('../partials/navbar.ejs') %>
+   
+   <h1>Articles</h1>
+   
+   <div class="container doul mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <% articles.forEach(article =>{ %>
+                <%- include('../partials/article_item',{article}); %>
+        <% }); %> 
+    </div>
+   </div> <br>
+   
+   <footer>
+      <%- include('../partials/footer.ejs') %>
+   </footer>
+   
+   <%- include('../partials/scripts.ejs') %>
+</body>
+</html>
